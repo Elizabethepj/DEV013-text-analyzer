@@ -8,6 +8,37 @@
 </head>
 
 <body>
+  <h1>ANALIZADOR DE TEXTO</h1>
+ 
+   <section>
+    <label for="mensaje">Por favor, ingrese un texto</label><br>
+    <form>
+    <textarea name="userInput" cols="150" rows="7"></textarea>
+    </form>
+   </section>
+
+    <section>
+    <h3> Resultados </h3>
+    <form>
+    <ul>
+        <li data-testid="word-count">Recuento de palabras:<span id="wordCount">0</span></li>
+        <li data-testid="character-count">Recuento de caracteres:<span id="charCount">0</span></li>
+        <li data-testid="character-no-spaces-count">Recuento de caracteres (sin espacios y signos):<span id="charNoSpaceCount">0</span></li>
+        <li data-testid="number-count">Recuento de números:<span id="numberCount">0</span></li>
+        <li data-testid="number-sum">Suma total de números:<span id="numberSum">0</span></li>
+        <li data-testid="word-length-average">Longitud media de las palabras:<span id="wordLengthAverage">0.00</span></li>
+    </ul>
+  </form>
+  </section>
+
+  <button id="resetButton">Limpiar</button> <br><br>
+    
+  <footer>
+    <p>Desarrolladora: Elizabeth Patiño Jaramillo</p> <br>
+  </footer>
+
   <script src="index.js" type="module"></script>
+  <script src ="analyzer.js" type="module"></script>
 </body>
+
 </html>

@@ -1,0 +1,75 @@
+h1 {
+    background-color: lightgray;
+    font-family: sans-serif;
+    color: black;
+    text-align:center;
+    padding:10px;
+    }
+
+    body {
+        font-family: sans-serif;
+        color: black;
+        text-align:center;
+        padding:10px;
+   }
+
+   textarea[name="userInput"]{
+    margin: 20px;
+    text-align:center;
+    font-family: sans-serif;
+    padding:10px;
+    justify-content: center;
+    align-items: center;
+    width: 94%;  
+    border-style:inset;
+    }
+
+    h3{
+    background-color: lightgray;
+    font-family: sans-serif;
+    color: black;
+    text-align:center;
+    padding:10px;
+    }
+
+    ul{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    }
+
+    li {
+    list-style-type:none; /*quita el punto*/
+    font-family:sans-serif;
+    margin:5px;
+    padding:4px;
+    border:1px;
+    background-color:lightslategray;
+
+   }
+
+    footer{
+    background-color: lightgray;
+    font-family: sans-serif;
+    color: black;
+    text-align:center;
+    padding:10px;
+    }
+   
+    #resetButton {
+    color: black;
+    text-align:center;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    }
+
