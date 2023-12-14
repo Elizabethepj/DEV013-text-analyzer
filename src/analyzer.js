@@ -12,18 +12,28 @@ const analyzer = {
      },
 
   //3. TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
-  // replace: elimina caracteres no deseados. [^\w] excluye espacios y signos de puntuación. \s así se representa el espacio en blanco, pero no funcionó enn este código.    
-  getCharacterCountExcludingSpaces: (text)=> {
-    const charNoSpaceCount = text.split('').reduce((count,char) => {
-    if (/\w/.test (char)) {
-    return count + 1;
-  }
-    return count;
-  }, 0);
-    return charNoSpaceCount;
+  // [^\w] excluye espacios y signos de puntuación. \s así se representa el espacio en blanco, pero no funcionó enn este código.    
+  getCharacterCountExcludingSpaces: (text) => {
+    let charNoSpaceCount = 0;
+     for (const char of text) {
+     if (/\w/.test(char)) {
+      charNoSpaceCount++;
+      }
+    }
+      return charNoSpaceCount;
   },
+  
+  //
+  //getCharacterCountExcludingSpaces: (text)=> {
+    //const charNoSpaceCount = text.split('').reduce((count,char) => {
+    //if (/\w/.test (char)) {
+    //return count + 1;}
+    //return count;
+  //}, 0);
+   // return charNoSpaceCount;
+ // },
 
-  // este fue el primer código para contar los caracteres sin espacios. Sin embargo, este no tenía lógica boleana.
+  // // replace: elimina caracteres no deseados. Este fue el primer código para contar los caracteres sin espacios. Sin embargo, este no tenía lógica boleana.
   //getCharacterCountExcludingSpaces: (text) => {
      // const charNoSpaceCount = text.replace(/[^\w]/gi,'').length;  
      // return charNoSpaceCount;
