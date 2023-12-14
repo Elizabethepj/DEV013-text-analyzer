@@ -8,12 +8,12 @@ function() {
     const userInput = document.querySelector('textarea[name="userInput"]');
     const resetButton = document.getElementById('resetButton');
     const resultElements = {
-        wordCount: document.getElementById ('wordCount'),
-        charCount: document.getElementById ('charCount'),
-        charNoSpaceCount: document.getElementById ('charNoSpaceCount'),
-        numberCount: document.getElementById ('numberCount'),
-        numberSum: document.getElementById ('numberSum'),
-        wordLengthAverage: document.getElementById ('wordLengthAverage'),
+        wordCount: document.querySelector ('[data-testid="word-count"] span'),
+        charCount: document.querySelector ('[data-testid="character-count"] span'),
+        charNoSpaceCount: document.querySelector ('[data-testid = "character-no-spaces-count"] span'),
+        numberCount: document.querySelector ('[data-testid= "number-count"] span'),
+        numberSum: document.querySelector ('[data-testid="number-sum"] span'),
+        wordLengthAverage: document.querySelector ('[data-testid="word-length-average"] span'),
     };
 
 function calcularMetricas(){

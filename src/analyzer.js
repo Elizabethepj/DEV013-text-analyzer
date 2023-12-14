@@ -1,11 +1,10 @@
 
 const analyzer = {  
-  
-   //1. TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
-   getWordCount: (text) => {
+//1. TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
+    getWordCount: (text) => {
     const words = text.split (/\s+/).filter(word => word !== '');
     return words.length;
-     },
+    },
 
  //2. TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
    getCharacterCount: (text) => {
@@ -13,11 +12,22 @@ const analyzer = {
      },
 
   //3. TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
-  //  [^\w] excluye espacios y signos de puntuación. \s así se representa el espacio en blanco, pero no funcionó enn este código.   
-    getCharacterCountExcludingSpaces: (text) => {
-      const charNoSpaceCount = text.replace(/[^\w]/gi,'').length;  
-      return charNoSpaceCount;
+  // replace: elimina caracteres no deseados. [^\w] excluye espacios y signos de puntuación. \s así se representa el espacio en blanco, pero no funcionó enn este código.    
+  getCharacterCountExcludingSpaces: (text)=> {
+    const charNoSpaceCount = text.split('').reduce((count,char) => {
+    if (/\w/.test (char)) {
+    return count + 1;
+  }
+    return count;
+  }, 0);
+    return charNoSpaceCount;
   },
+
+  // este fue el primer código para contar los caracteres sin espacios. Sin embargo, este no tenía lógica boleana.
+  //getCharacterCountExcludingSpaces: (text) => {
+     // const charNoSpaceCount = text.replace(/[^\w]/gi,'').length;  
+     // return charNoSpaceCount;
+  //},
 
    //4. TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
    getNumberCount: (text) => {
@@ -26,13 +36,15 @@ const analyzer = {
     },
 
    //5. TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-        getNumberSum: (text) => {
+   //En esta función se convierten cadenas tipo string a tipo number. text.match(/\d+/g) busca los números y los ubica en un array, y parseInt(num) dentro de reduce los convierte en un valor númerico. 
+   getNumberSum: (text) => {
         const numbers = text.match(/\d+/g) || [];
         const totalSum = numbers.reduce((sum, num) => sum + parseInt(num), 0);
         return totalSum;
       },
 
     //6. TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+  // split: divide el texto en palabras basándose en espacios. Filter: elimina las palabras vacías.
   getAverageWordLength: (text) => {    
   const words = text.split(/\s+/).filter(word => word !== '');
   const totalWordLength = words.reduce((sum, word) => sum + word.length, 0);
