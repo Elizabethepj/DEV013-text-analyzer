@@ -52,7 +52,7 @@ const analyzer = {
   },
 
   // 5. TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-  //En esta función se convierten cadenas tipo string a tipo number. text.match(/\d+/g) busca los números y los ubica en un array, y parseInt(num) dentro de reduce los convierte en un valor númerico. 
+  //En esta función se conviertengit cadenas tipo string a tipo number. text.match(/\d+/g) busca los números y los ubica en un array, y parseInt(num) dentro de reduce los convierte en un valor númerico. 
   getNumberSum: (text) => {
     const numbers = text.match(/[-+]?\b\d+(\.\d+)?\b/g) || []; 
     const totalSum = numbers.reduce((sum, num) => sum + parseFloat(num), 0);
