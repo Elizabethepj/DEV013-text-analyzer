@@ -40,15 +40,22 @@ const analyzer = {
 
   //4. TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
   getNumberCount: (text) => {
-    const numbers = text.match(/\d+/g) || [];
-    return numbers.length;
+    const numbers = text.match (/[-+]?\b\d+(\.\d+)?\b/g) || [];
+    const numCount = numbers.reduce ((count, num) => {
+      const numVal = parseFloat(num);
+      if (!isNaN(numVal)) {
+        return count + 1;
+      }
+      return count;
+    }, 0);
+    return numCount;
   },
 
-  //5. TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+  // 5. TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
   //En esta función se convierten cadenas tipo string a tipo number. text.match(/\d+/g) busca los números y los ubica en un array, y parseInt(num) dentro de reduce los convierte en un valor númerico. 
   getNumberSum: (text) => {
-    const numbers = text.match(/\d+/g) || [];
-    const totalSum = numbers.reduce((sum, num) => sum + parseInt(num), 0);
+    const numbers = text.match(/[-+]?\b\d+(\.\d+)?\b/g) || []; 
+    const totalSum = numbers.reduce((sum, num) => sum + parseFloat(num), 0);
     return totalSum;
   },
 
