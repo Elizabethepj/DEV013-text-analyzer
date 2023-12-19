@@ -6,11 +6,11 @@ h1 {
     padding:10px;
     }
 
-    body {
-        font-family: sans-serif;
-        color: black;
-        text-align:center;
-        padding:10px;
+body {
+    font-family: sans-serif;
+    color: black;
+    text-align:center;
+    padding:10px;
    }
 
    textarea[name="userInput"]{
