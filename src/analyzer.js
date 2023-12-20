@@ -10,7 +10,7 @@ const analyzer = {
   getCharacterCount: (text) => {
     return text.length;
   },
-
+  
   //3. TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
   // [^\w] excluye espacios y signos de puntuación. \s así se representa el espacio en blanco, pero no funcionó enn este código.    
   getCharacterCountExcludingSpaces: (text) => {
