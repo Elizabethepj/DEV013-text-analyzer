@@ -8,12 +8,14 @@
 </head>
 
 <body>
+  <header >
   <h1>ANALIZADOR DE TEXTO</h1>
- 
+  </header><br>
+
    <section>
-    <label for="mensaje">Por favor, ingrese un texto</label><br>
+    <label for="mensaje">Por favor, ingrese un texto</label><br><br>
     <form>
-    <textarea name="userInput" cols="150" rows="7"></textarea>
+    <textarea name="user-input" cols="150" rows="7"></textarea>
     </form>
    </section>
 
@@ -21,12 +23,12 @@
     <h3> Resultados </h3>
     <form>
     <ul>
-        <li data-testid="word-count">Recuento de palabras: <span>0</span></li>
-        <li data-testid="character-count">Recuento de caracteres: <span>0</span></li>
-        <li data-testid="character-no-spaces-count">Recuento de caracteres (sin espacios y signos): <span>0</span></li>
-        <li data-testid="number-count">Recuento de números: <span>0</span></li>
-        <li data-testid="number-sum">Suma total de números: <span>0</span></li>
-        <li data-testid="word-length-average">Longitud media de las palabras: <span>0.00</span></li>
+        <li class="estilo" data-testid="word-count">Recuento de palabras: 0</li>
+        <li class="estilo" data-testid="character-count">Recuento de caracteres: 0</li>
+        <li class="estilo" data-testid="character-no-spaces-count">Recuento de caracteres (sin espacios y signos): 0</li>
+        <li class="estilo" data-testid="number-count">Recuento de números: 0</li>
+        <li class="estilo" data-testid="number-sum">Suma total de números: 0</li>
+        <li class="estilo" data-testid="word-length-average">Longitud media de las palabras: 0.00</li>
     </ul>
   </form>
   </section>
@@ -34,7 +36,7 @@
   <button id="resetButton">Limpiar</button> <br><br>
     
   <footer>
-    <p>Desarrolladora: Elizabeth Patiño Jaramillo</p> <br>
+    <p>Desarrolladora: Elizabeth Patiño Jaramillo / Laboratoria </p> <br>
   </footer>
 
   <script src="index.js" type="module"></script>

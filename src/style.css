@@ -1,4 +1,4 @@
-h1 {
+header {
     background-color: lightgray;
     font-family: sans-serif;
     color: black;
@@ -11,9 +11,10 @@ body {
     color: black;
     text-align:center;
     padding:10px;
+    align-items: center;
    }
 
-   textarea[name="userInput"]{
+   textarea[name="user-input"]{
     margin: 20px;
     text-align:center;
     font-family: sans-serif;
@@ -40,14 +41,15 @@ body {
     gap: 20px;
     }
 
-    li {
+    .estilo {
     list-style-type:none; /*quita el punto*/
     font-family:sans-serif;
-    margin:5px;
+    width: 363px ;
+    height: 35px ;
+    margin:1px;
     padding:4px;
     border:1px;
     background-color:lightslategray;
-
    }
 
     footer{

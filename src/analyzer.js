@@ -56,7 +56,7 @@ const analyzer = {
   getNumberSum: (text) => {
     const numbers = text.match (/[-+]?\b\d+(\.\d+)?\b/g) || []; 
     const totalSum = numbers.reduce((sum, num) => sum + parseFloat(num), 0);
-    return totalSum;
+    return parseFloat(totalSum.toFixed(2));
   },
 
   //6. TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
