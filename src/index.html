@@ -8,39 +8,40 @@
 </head>
 
 <body>
-  <header >
-  <h1>ANALIZADOR DE TEXTO</h1>
+  <header>
+    <h1>ANALIZADOR DE TEXTO</h1>
   </header><br>
 
-   <section>
+  <section>
     <label for="mensaje">Por favor, ingrese un texto</label><br><br>
     <form>
-    <textarea name="user-input" cols="150" rows="7"></textarea>
+      <textarea name="user-input" cols="150" rows="7" placeholder="Escribe aquí tu texto..."></textarea>
     </form>
-   </section>
+  </section>
 
-    <section>
+  <section>
     <h3> Resultados </h3>
     <form>
-    <ul>
+      <ul>
         <li class="estilo" data-testid="word-count">Recuento de palabras: 0</li>
         <li class="estilo" data-testid="character-count">Recuento de caracteres: 0</li>
-        <li class="estilo" data-testid="character-no-spaces-count">Recuento de caracteres (sin espacios y signos): 0</li>
+        <li class="estilo" data-testid="character-no-spaces-count">Recuento de caracteres (sin espacios y signos): 0
+        </li>
         <li class="estilo" data-testid="number-count">Recuento de números: 0</li>
         <li class="estilo" data-testid="number-sum">Suma total de números: 0</li>
         <li class="estilo" data-testid="word-length-average">Longitud media de las palabras: 0.00</li>
-    </ul>
-  </form>
+      </ul>
+    </form>
   </section>
 
   <button id="resetButton">Limpiar</button> <br><br>
-    
+
   <footer>
     <p>Desarrolladora: Elizabeth Patiño Jaramillo / Laboratoria </p> <br>
   </footer>
 
   <script src="index.js" type="module"></script>
-  <script src ="analyzer.js" type="module"></script>
+  <script src="analyzer.js" type="module"></script>
 </body>
 
 </html>

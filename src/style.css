@@ -1,68 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
 header {
     background-color: lightgray;
     font-family: sans-serif;
     color: black;
-    text-align:center;
-    padding:10px;
-    }
+    text-align: center;
+    padding: 10px;
+}
 
 body {
     font-family: sans-serif;
     color: black;
-    text-align:center;
-    padding:10px;
+    text-align: center;
+    padding: 10px;
     align-items: center;
-   }
+}
 
-   textarea[name="user-input"]{
+textarea[name="user-input"] {
     margin: 20px;
-    text-align:center;
+    text-align: center;
     font-family: sans-serif;
-    padding:10px;
+    padding: 10px;
     justify-content: center;
     align-items: center;
-    width: 94%;  
-    border-style:inset;
-    }
+    width: 94%;
+    border-style: inset;
+}
 
-    h3{
+h3 {
     background-color: lightgray;
     font-family: sans-serif;
     color: black;
-    text-align:center;
-    padding:10px;
-    }
+    text-align: center;
+    padding: 10px;
+}
 
-    ul{
+ul {
     list-style: none;
-    padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    }
+}
 
-    .estilo {
-    list-style-type:none; /*quita el punto*/
-    font-family:sans-serif;
-    width: 363px ;
-    height: 35px ;
-    margin:1px;
-    padding:4px;
-    border:1px;
-    background-color:lightslategray;
-   }
+.estilo {
+    list-style-type: none;
+    /*quita el punto*/
+    height: 35px;
+    width: 363px;
+    margin: 1px;
+    padding: 4px;
+    border: 1px;
+    border-width: 2px;
+}
 
-    footer{
+li {
+    height: 35px;
+    width: 363px;
+    margin: 1px;
+    padding: 4px;
+    border: 1px;
+    border-width: 2px;
+    background: lightslategray;
+    font-family: sans-serif;
+    box-sizing: unset;
+    box-sizing: content-box;
+}
+
+footer {
     background-color: lightgray;
     font-family: sans-serif;
     color: black;
-    text-align:center;
-    padding:10px;
-    }
-   
-    #resetButton {
+    text-align: center;
+    padding: 10px;
+}
+
+#resetButton {
     color: black;
-    text-align:center;
+    text-align: center;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -73,5 +89,4 @@ body {
     border: none;
     border-radius: 5px;
     font-family: sans-serif;
-    }
-
+}

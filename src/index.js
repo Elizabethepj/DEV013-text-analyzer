@@ -1,33 +1,53 @@
 import analyzer from './analyzer.js';
 
-//TODO: escuchar eventos del DOM e invocar los métodos del objeto `analyzer`
-//Espera a que el DOM esté completamente cargado antes de ejecutar el código JavaScript, asegurando que todos los elementos del documento estén disponibles para ser manipulados.
-document.addEventListener('DOMContentLoaded',
-  function() {
-    const userInput = document.querySelector('textarea[name="user-input"]');
-    const resetButton = document.getElementById('resetButton');
-    const resultElements = {
-      wordCount: document.querySelector ('[data-testid="word-count"]'),
-      charCount: document.querySelector ('[data-testid="character-count"]'),
-      charNoSpaceCount: document.querySelector ('[data-testid = "character-no-spaces-count"] '),
-      numberCount: document.querySelector ('[data-testid= "number-count"]'),
-      numberSum: document.querySelector ('[data-testid="number-sum"]'),
-      wordLengthAverage: document.querySelector ('[data-testid="word-length-average"]'),
-    };
+document.addEventListener('DOMContentLoaded', function () {
+  const userInput = document.querySelector('textarea[name="user-input"]');
+  const resetButton = document.getElementById('resetButton');
 
-    function calcularMetricas(){
-      const text = userInput.value;
-      resultElements.wordCount.textContent = 'Recuento de palabras: ' + analyzer.getWordCount(text);
-      resultElements.charCount.textContent = 'Recuento de caracteres: ' + analyzer.getCharacterCount(text);
-      resultElements.charNoSpaceCount.textContent = 'Recuento de caracteres (sin espacios y signos): ' + analyzer.getCharacterCountExcludingSpaces(text);
-      resultElements.numberCount.textContent = 'Recuento de números: ' + analyzer.getNumberCount(text);
-      resultElements.numberSum.textContent = 'Suma total de números: ' + analyzer.getNumberSum(text);
-      resultElements.wordLengthAverage.textContent = 'Longitud media de las palabras: ' + analyzer.getAverageWordLength (text);
-    }
+  function WordCount() {
+    const text = userInput.value;
+    document.querySelector('[data-testid="word-count"]').textContent = 'Recuento de palabras: ' + analyzer.getWordCount(text);
+  }
 
-    userInput.addEventListener('input', calcularMetricas);
-    resetButton.addEventListener('click', function(){
-      userInput.value = '';
-      calcularMetricas();
-    });
+  function CharCount() {
+    const text = userInput.value;
+    document.querySelector('[data-testid="character-count"]').textContent = 'Recuento de caracteres: ' + analyzer.getCharacterCount(text);
+  }
+
+  function CharNoSpaceCount() {
+    const text = userInput.value;
+    document.querySelector('[data-testid="character-no-spaces-count"]').textContent = 'Recuento de caracteres (sin espacios y signos): ' + analyzer.getCharacterCountExcludingSpaces(text);
+  }
+
+  function NumberCount() {
+    const text = userInput.value;
+    document.querySelector('[data-testid="number-count"]').textContent = 'Recuento de números: ' + analyzer.getNumberCount(text);
+  }
+
+  function NumberSum() {
+    const text = userInput.value;
+    document.querySelector('[data-testid="number-sum"]').textContent = 'Suma total de números: ' + analyzer.getNumberSum(text);
+  }
+
+  function WordLengthAverage() {
+    const text = userInput.value;
+    document.querySelector('[data-testid="word-length-average"]').textContent = 'Longitud media de las palabras: ' + analyzer.getAverageWordLength(text);
+  }
+
+  userInput.addEventListener('input', WordCount);
+  userInput.addEventListener('input', CharCount);
+  userInput.addEventListener('input', CharNoSpaceCount);
+  userInput.addEventListener('input', NumberCount);
+  userInput.addEventListener('input', NumberSum);
+  userInput.addEventListener('input', WordLengthAverage);
+
+  resetButton.addEventListener('click', function () {
+    userInput.value = '';
+    WordCount();
+    CharCount();
+    CharNoSpaceCount();
+    NumberCount();
+    NumberSum();
+    WordLengthAverage();
   });
+});
