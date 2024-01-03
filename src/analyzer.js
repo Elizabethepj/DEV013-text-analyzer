@@ -18,7 +18,7 @@ const analyzer = {
     for (let i = 0; i < text.length; i++) {
       const char = text[i];
       if (/\w/.test(char)) {
-        charNoSpaceCount++; 
+        charNoSpaceCount++;
       }
     }
     return charNoSpaceCount;

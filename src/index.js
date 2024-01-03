@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const text = userInput.value;
     document.querySelector('[data-testid="word-length-average"]').textContent = 'Longitud media de las palabras: ' + analyzer.getAverageWordLength(text);
   }
-
+  
   userInput.addEventListener('input', WordCount);
   userInput.addEventListener('input', CharCount);
   userInput.addEventListener('input', CharNoSpaceCount);

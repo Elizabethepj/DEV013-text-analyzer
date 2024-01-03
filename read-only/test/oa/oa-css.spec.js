@@ -113,7 +113,7 @@ describe('CSS', () => {
     });
   });
 
-  describe('Modelo de caja (box model)', () => {
+  describe.only('Modelo de caja (box model)', () => {
 
     it('Se usan atributos de modelo de caja en clase CSS para <li>', () => {
       let allRulesAttributes = [];
@@ -127,6 +127,7 @@ describe('CSS', () => {
       });
 
       //expect at least one ulRulesAttributes starts with at least one element of boxModelAttributes
+      console.log(allRulesAttributes)
       expect(
         allRulesAttributes.some(
           (attribute) => BOX_MODEL_ATTRIBUTES.some(
