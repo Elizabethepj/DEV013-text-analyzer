@@ -1,12 +1,5 @@
 # Analizador de texto por Elizabeth Patiño
 
-
-<<<<<<< HEAD
-=======
-
-![Captura web_3-1-2024_102941_localhost](https://github.com/Elizabethepj/DEV013-text-analyzer/assets/153139595/bbdc5c4f-5e98-46a1-939e-f8ffe5de9801)
-
->>>>>>> 3b22684c75a38feff92617bbd8e40766d1fe9b52
 ## Índice
 
 * [1. Consideraciones generales](#1-consideraciones-generales)
