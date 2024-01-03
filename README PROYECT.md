@@ -2,6 +2,7 @@
 
 
 
+![Captura web_3-1-2024_102941_localhost](https://github.com/Elizabethepj/DEV013-text-analyzer/assets/153139595/bbdc5c4f-5e98-46a1-939e-f8ffe5de9801)
 
 ## Índice
 
