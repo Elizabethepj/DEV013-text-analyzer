@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: lightgray;
+  font-family: sans-serif;
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
+
+body {
+  font-family: sans-serif;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  align-items: center;
+}
+
+textarea[name="user-input"] {
+  margin: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 94%;
+  border-style: inset;
+}
+
+h3 {
+  background-color: lightgray;
+  font-family: sans-serif;
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.estilo {
+  list-style-type: none;
+  height: 30px;
+  width: 350px;
+  margin: 1px;
+  padding: 4px;
+  border: 1px;
+  border-width: 2px;
+  text-align: center;
+}
+
+li {
+  background: lightslategray;
+  font-family: sans-serif;
+  box-sizing: unset;
+  box-sizing: content-box;
+}
+
+footer {
+  background-color: lightgray;
+  font-family: sans-serif;
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
+
+#resetButton {
+  color: black;
+  text-align: center;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-family: sans-serif;
+  background-color: gray;
+}
